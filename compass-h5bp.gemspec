@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Peter Gumeson"]
   s.email       = ["gumeson@gmail.com"]
   s.homepage    = "http://rubygems.org/gems/compass-h5bp"
-  s.summary     = %q{ A compass extension of common html5 mixins extracted from Html5Boilerplate v2.0 }
-  s.description = %q{}
+  s.summary     = %q{ Compass extension for Html5 Boilerplate v2.0 }
+  s.description = %q{ Compass extension of Html5 mixins extracted from v2 of Paul Irish's Html5 Boilerplate project }
 
   s.rubyforge_project = "compass-h5bp"
 
