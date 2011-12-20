@@ -15,6 +15,7 @@ $invalid-background-color: #f0dddd !default;
 @mixin h5bp-normalize {
   @include h5bp-display;
   @include h5bp-base;
+  @include h5bp-selection;
   @include h5bp-links;
   @include h5bp-typography;
   @include h5bp-lists;
@@ -49,6 +50,10 @@ $invalid-background-color: #f0dddd !default;
 
   body, button, input, select, textarea { font-family: sans-serif; color: $font-color; }
 
+}
+
+@mixin h5bp-selection {
+  
   // Remove text-shadow in selection highlight: h5bp.com/i
   // These selection declarations have to be separate
   // Also: hot pink! (or customize the background color to match your design)
