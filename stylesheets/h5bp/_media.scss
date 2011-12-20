@@ -2,14 +2,12 @@
 // Inlined to avoid required HTTP connection: h5bp.com/r
 
 @mixin h5bp-media {
-
   @media print {
-    @include media-print;
+    @include h5bp-media-print;
   }
-
 }
 
-@mixin media-print {
+@mixin h5bp-media-print {
   * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } // Black prints faster: h5bp.com/s
   a, a:visited { text-decoration: underline; }
   a[href]:after { content: " (" attr(href) ")"; }
