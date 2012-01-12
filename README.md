@@ -3,8 +3,8 @@ Compass H5bp
 
 This is a Compass extension of Html5 mixins extracted from v2 on Html5 Boilerplate
 by Paul Irish and Divya Manian. This gem provides only the CSS mixins and not the
-html or javascript templates.  This makes sense because any implementations of
-Html5 Boilerplate will be specific to the language and framework it's built on.
+html or javascript templates.  This makes sense because any implementation of
+Html5 Boilerplate should be specific to the language and framework it's built on.
 
 Browse [html5boilerplate.com](http://html5boilerplate.com) for the full workup.
 
@@ -28,7 +28,7 @@ Then run
 Usage
 =========================
 
-Inside your SCSS or SASS file, you first need to import the `h5bp`
+Inside your Scss (or Sass) file, you first need to import the `h5bp`
 compass library before you can use any of the mixins:
 
     @import "h5bp";
@@ -63,5 +63,5 @@ License
 HTML5 Boilerplate created by by Paul Irish and Divya Manian
 http://html5boilerplate.com
 
-Copyright (c) 2011 Peter Gumeson
+Copyright (c) 2012 Peter Gumeson
 See [LICENSE](https://github.com/sporkd/compass-h5bp/blob/master/LICENSE) for full license.
