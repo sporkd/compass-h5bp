@@ -37,6 +37,7 @@ Then include the mixins that make up the Normalize portion of Html5
 Boilerplate's styles. http://necolas.github.com/normalize.css
 
     @include h5bp-display;
+    @include h5bp-selection;
     @include h5bp-base;
     @include h5bp-links;
     @include h5bp-typography;
