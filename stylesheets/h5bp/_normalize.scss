@@ -4,6 +4,8 @@
 
 $line-height: 1.4 !default;
 $font-color: #222 !default;
+$font-family: sans-serif !default;
+$font-size: 1em !default;
 $link-color: #00e !default;
 $link-hover-color: #06e !default;
 $link-visited-color: #551a8b !default;
@@ -45,9 +47,9 @@ $invalid-background-color: #f0dddd !default;
 
   html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-  html, button, input, select, textarea { font-family: sans-serif; color: $font-color; }
+  html, button, input, select, textarea { font-family: $font-family; color: $font-color; }
 
-  body { margin: 0; font-size: 1em; line-height: $line-height; }
+  body { margin: 0; font-size: $font-size; line-height: $line-height; }
 
 }
 
