@@ -18,12 +18,11 @@
 
 // For image replacement
 @mixin image-replacement($img: none, $x: 50%, $y: 50%) {
-  display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0;
+  border: 0; font: 0/0 a; text-shadow: none; color: transparent; background-color: transparent;
   @if $img != none {
     background-image: image-url($img);
     background-position: $x $y;
   }
-  br { display: none; }
 }
 
 // Uses image dimensions
