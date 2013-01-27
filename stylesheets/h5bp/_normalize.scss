@@ -281,8 +281,8 @@
   // 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
   // 2. Improve image quality when scaled in IE 7.
   img {
-      border: 0; /* 1 */
-      -ms-interpolation-mode: bicubic; /* 2 */
+      border: 0; // 1
+      -ms-interpolation-mode: bicubic; // 2
   }
 
   // Correct overflow displayed oddly in IE 9.
