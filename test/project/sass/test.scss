@@ -16,4 +16,7 @@
     /* Style adjustments for high resolution devices */
     body { margin: 0; } //HACK
 }
-@include h5bp-media;
+
+@media print {
+  @include h5bp-media-print;
+}
