@@ -6,7 +6,7 @@
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
-    body { margin: 0; } //HACK
+    body { margin: 0; } //HACK: scss class can't be empty
 }
 
 @media print,
@@ -14,7 +14,7 @@
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
-    body { margin: 0; } //HACK
+    body { margin: 0; } //HACK: scss class can't be empty
 }
 
 @media print {
