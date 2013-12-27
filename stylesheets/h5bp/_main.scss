@@ -33,11 +33,13 @@ $selected-background-color: #b3d4fc !default;
   // Customize the background color to match your design.
   ::-moz-selection {
       background: $selected-background-color;
+      color: $selected-font-color;
       text-shadow: none;
   }
 
   ::selection {
       background: $selected-background-color;
+      color: $selected-font-color;
       text-shadow: none;
   }
 
