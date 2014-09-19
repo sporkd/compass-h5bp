@@ -67,9 +67,9 @@ Next you can include the opinionated default base styles:
 
     @include h5bp-base-styles;
 
-You can include the default Html5 Boilerplate Chrome Frame notification styling:
+You can include the default Html5 Boilerplate Browse Happy notification styling:
 
-    @include h5bp-chromeframe;
+    @include h5bp-browsehappy;
 
 Now you can define your own custom CSS here.
 

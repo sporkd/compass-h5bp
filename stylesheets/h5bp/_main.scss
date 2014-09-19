@@ -7,7 +7,7 @@ $selected-background-color: #b3d4fc !default;
 
 @mixin h5bp-main {
   @include h5bp-base-styles;
-  @include h5bp-chromeframe;
+  @include h5bp-browsehappy;
 }
 
 //
@@ -23,7 +23,7 @@ $selected-background-color: #b3d4fc !default;
       color: $font-color;
   }
 
-  body {
+  html {
       font-size: $font-size;
       line-height: $line-height;
   }
@@ -51,8 +51,11 @@ $selected-background-color: #b3d4fc !default;
       padding: 0;
   }
 
-  // Remove the gap between images and the bottom of their containers: h5bp.com/i/440
-  img {
+  // Remove the gap between images, videos, audio and canvas and the bottom of their containers: h5bp.com/i/440
+  audio,
+  canvas,
+  img,
+  video {
       vertical-align: middle;
   }
 
@@ -70,11 +73,11 @@ $selected-background-color: #b3d4fc !default;
 }
 
 //
-// Chrome Frame Prompt
+// Browse Happy Prompt
 //
 
-@mixin h5bp-chromeframe {
-  .chromeframe {
+@mixin h5bp-browsehappy {
+  .browsehappy {
       margin: 0.2em 0;
       background: #ccc;
       color: #000;
