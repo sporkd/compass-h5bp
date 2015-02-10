@@ -33,14 +33,21 @@ Boilerplate styles. You can include all of Normalize at once:
 
  Or pull in only the portions of Normalize you want:
 
-    @include html5bp-base;
-    @include html5bp-display;
-    @include html5bp-links;
-    @include html5bp-semantics;
-    @include html5bp-embedded;
-    @include html5bp-grouping;
-    @include html5bp-forms;
-    @include html5bp-tables;
+    `@include html5bp-base;`
+    
+    `@include html5bp-display;`
+    
+    `@include html5bp-links;`
+    
+    `@include html5bp-semantics;`
+    
+    `@include html5bp-embedded;`
+    
+    `@include html5bp-grouping;`
+    
+    `@include html5bp-forms;`
+    
+    `@include html5bp-tables;`
 
 3. *Optional:* Include the opinionated default base styles:
 
