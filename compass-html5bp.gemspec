@@ -3,15 +3,16 @@ $:.push File.expand_path("../lib", __FILE__)
 require "compass/html5bp/version"
 
 Gem::Specification.new do |s|
-  s.name        = "compass-html5bp"
-  s.version     = Compass::Html5bp::VERSION
-  s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Ron Scott-Adams", "Peter Gumeson"]
-  s.email       = 'ron@tohuw.net'
-  s.homepage    = "http://rubygems.org/gems/compass-html5bp"
-  s.summary     = %q{ Compass extension for Html5 Boilerplate v5.0 }
-  s.description = %q{ Compass extension of Html5 mixins extracted from v5 of the Html5 Boilerplate project (h5bp.com) }
-  s.license    = 'MIT'
+  s.name                  = "compass-html5bp"
+  s.version               = Compass::Html5bp::VERSION
+  s.platform              = Gem::Platform::RUBY
+  s.required_ruby_version = '~> 2.0'
+  s.authors               = ["Ron Scott-Adams", "Peter Gumeson"]
+  s.email                 = 'ron@tohuw.net'
+  s.homepage              = "http://rubygems.org/gems/compass-html5bp"
+  s.summary               = %q{ Compass extension for HTML5 Boilerplate v5.0 }
+  s.description           = %q{ Compass extension of HTML5 mixins extracted from the HTML5 Boilerplate project (h5bp.com) }
+  s.license               = 'MIT'
 
   s.rubyforge_project = "compass-html5bp"
 
