@@ -27,11 +27,9 @@ The following order ensures your custom modifications to the HTML Boilerplate st
     `@import "html5bp";`
 
 2. Include the mixins that make up the [Normalize](http://necolas.github.com/normalize.css) portion of the HTML5
-Boilerplate styles.
+Boilerplate styles. You can include all of Normalize at once:
 
-You can include all of Normalize at once:
-
-    @include html5bp-normalize;
+    `@include html5bp-normalize;`
 
  Or pull in only the portions of Normalize you want:
 
