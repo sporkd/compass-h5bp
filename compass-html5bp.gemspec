@@ -14,8 +14,6 @@ Gem::Specification.new do |s|
   s.description           = %q{ Compass extension of HTML5 mixins extracted from the HTML5 Boilerplate project (h5bp.com) }
   s.license               = 'MIT'
 
-  s.rubyforge_project = "compass-html5bp"
-
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
