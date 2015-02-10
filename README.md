@@ -24,7 +24,7 @@ The following order ensures your custom modifications to the HTML Boilerplate st
 
 1. Inside your SCSS (or Sass) file, you must import the `html5bp` compass library before you can use any of the mixins:
 
-    @import "html5bp";
+    `@import "html5bp";`
 
 2. Include the mixins that make up the [Normalize](http://necolas.github.com/normalize.css) portion of the HTML5
 Boilerplate styles.
@@ -46,25 +46,27 @@ You can include all of Normalize at once:
 
 3. *Optional:* Include the opinionated default base styles:
 
-    @include html5bp-base-styles;
+    `@include html5bp-base-styles;`
 
 4. *Optional:* You can include the styling for the browser upgrade warning:
 
-    @include html5bp-browserupgrade;
+    `@include html5bp-browserupgrade;`
 
 5. *Optional:* Define your custom modifications to the HTML5 Boilerplate styles here.
 
 6. *Optional:* Let html5bp define some semantic helper classes. (e.g. `.clearfix`):
 
-    @include html5bp-helpers;
+    `@include html5bp-helpers;`
 
 7. *Optional:* Include html5bp's predefined print style media query:
 
-    @include html5bp-media;
+    `@include html5bp-media;`
 
 ## Caveats
 
 If you're coming from [compass-h5bp](https://github.com/sporkd/compass-h5bp), be aware several normalize mixins have had their name changed, and any mixin or feature that had been marked for deprecation has been removed. That being said, migration should be relatively simple.
+
+The order above matters. It's important to note that "custom modifications to the HTML5 Boilerplate styles" means only that - the rest of your scss goes below everything here.
 
 I am no rubyist, so if I've botched any patches to the Ruby-specific stuff, please do open an issue or, better, submit a pull request.
 
