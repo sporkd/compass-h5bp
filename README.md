@@ -35,13 +35,12 @@ You can include all of Normalize at once:
 
  Or pull in only the portions of Normalize you want:
 
-    @include html5bp-display;
     @include html5bp-base;
+    @include html5bp-display;
     @include html5bp-links;
-    @include html5bp-typography;
-    @include html5bp-lists;
-    @include html5bp-embeds;
-    @include html5bp-figures;
+    @include html5bp-semantics;
+    @include html5bp-embedded;
+    @include html5bp-grouping;
     @include html5bp-forms;
     @include html5bp-tables;
 
@@ -62,6 +61,14 @@ You can include all of Normalize at once:
 7. *Optional:* Include html5bp's predefined print style media query:
 
     @include html5bp-media;
+
+## Caveats
+
+If you're coming from [compass-h5bp](https://github.com/sporkd/compass-h5bp), be aware several normalize mixins have had their name changed, and any mixin or feature that had been marked for deprecation has been removed. That being said, migration should be relatively simple.
+
+I am no rubyist, so if I've botched any patches to the Ruby-specific stuff, please do open an issue or, better, submit a pull request.
+
+Then again, I might have botched anything else as well, so any contributions are very welcome.
 
 ## Acknowledgments
 

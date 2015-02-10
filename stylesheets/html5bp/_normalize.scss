@@ -4,6 +4,10 @@
   @include html5bp-display;
   @include html5bp-links;
   @include html5bp-semantics;
+  @include html5bp-embedded;
+  @include html5bp-grouping;
+  @include html5bp-forms;
+  @include html5bp-tables;
 }
 
 // Base
