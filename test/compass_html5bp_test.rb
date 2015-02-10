@@ -1,6 +1,6 @@
 require 'test/unit'
 require 'compass'
-require 'compass-h5bp'
+require 'compass-html5bp'
 require 'sass/plugin'
 require 'fileutils'
 
@@ -10,8 +10,8 @@ TEST_OUTPUT_PATH = File.join(PROJECT_DIR, 'css', 'test.css')
 ORIGINAL_NORMALIZE_OUTPUT_PATH = File.join(PROJECT_DIR, 'css', 'original_normalize.css')
 TEST_NORMALIZE_OUTPUT_PATH = File.join(PROJECT_DIR, 'css', 'test_normalize.css')
 
-class CompassH5bpTest < Test::Unit::TestCase
-  
+class Compasshtml5bpTest < Test::Unit::TestCase
+
   def test_compass_version_matches_original
     FileUtils.rm_f ORIGINAL_OUTPUT_PATH
     FileUtils.rm_f TEST_OUTPUT_PATH
@@ -37,7 +37,7 @@ class CompassH5bpTest < Test::Unit::TestCase
     assert_equal original_css, test_css
     assert_equal original_normalize_css, test_normalize_css
   end
-  
+
   def read_and_normalize(file)
     File.open(file).read.
       gsub(/\/\*.+?\*\/\n/m, '').

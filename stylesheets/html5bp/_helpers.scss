@@ -1,56 +1,25 @@
-//
 // Helper classes
-//
-
-@mixin h5bp-helpers {
-
-  .ir { @include image-replacement; }
+@mixin html5bp-helpers {
 
   .hidden { @include hidden; }
 
   .visuallyhidden { @include visually-hidden; }
-  
+
   .invisible { @include invisible; }
 
   .clearfix { @include micro-clearfix; }
 
 }
 
-// Image replacement
-@mixin image-replacement($img: none, $x: 50%, $y: 50%) {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  // IE 6/7 fallback
-  *text-indent: -9999px;
-
-  &:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-  }
-
-  @if $img != none {
-    background-image: image-url($img);
-    background-position: $x $y;
-  }
-}
-
-// Uses image dimensions
-@mixin sized-image-replacement($img, $x: 50%, $y: 50%) {
-  @include image-replacement($img, $x, $y);
-  width: image-width($img);
-  height: image-height($img);
-}
-
-// Hide from both screenreaders and browsers: h5bp.com/u
+// Hide from both screenreaders and browsers:
+// http://juicystudio.com/article/screen-readers-display-none.php
 @mixin hidden {
   display: none !important;
   visibility: hidden;
 }
 
-// Hide only visually, but have it available for screenreaders: h5bp.com/v
+// Hide only visually, but have it available for screenreaders:
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -60,9 +29,9 @@
   padding: 0;
   position: absolute;
   width: 1px;
-  
+
   // Extends the .visuallyhidden class to allow the element to be focusable
-  // when navigated to via the keyboard: h5bp.com/p
+  // when navigated to via the keyboard: https://www.drupal.org/node/897638
   &.focusable:active,
   &.focusable:focus {
     clip: auto;
@@ -98,10 +67,3 @@
   &:after {
     clear: both;
   }
-
-  // For IE 6/7 only
-  // Include this rule to trigger hasLayout and contain floats.
-  & {
-    *zoom: 1;
-  }
-}

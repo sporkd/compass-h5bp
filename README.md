@@ -1,91 +1,72 @@
-Compass H5bp
-============
+# Compass html5bp
 
-This is a Compass extension of HTML5 mixins extracted from v4 of [HTML5 Boilerplate](http://html5boilerplate.com).
-This gem provides only the CSS mixins and not the HTML or Javascript templates. This makes sense because any 
+This is a [Compass extension](http://compass-style.org/help/tutorials/extensions/) of HTML5 mixins extracted from v5 of [HTML5 Boilerplate](http://html5boilerplate.com), forked from Peter Gumeson's original gem, [compass-h5bp](https://github.com/sporkd/compass-h5bp).
+This gem provides only the CSS mixins and not the HTML or Javascript templates. This makes sense because any
 implementation of HTML5 Boilerplate should be specific to the language and framework it's built on.
 
-Browse [html5boilerplate.com](http://html5boilerplate.com) for the full workup.
+## Installation
 
-Or, you can read more about compass extensions [here](http://compass-style.org/help/tutorials/extensions/).
+### Two options:
+* A raw install using gem:
+`gem install compass-html5bp`
 
+* Or, if you're using [Bundler](http://gembundler.com/), you can install it via `bundle install` by placing the following line in your Gemfile: `gem 'compass-html5bp'`
 
-Installation
-============
-
-Two options: 
-
----
-
-1) A raw install using gem:
-
-    gem install compass-h5bp
-
----
-
-2) Or, if using [Bundler](http://gembundler.com/). Place the following line in your Gemfile:
-
-    gem 'compass-h5bp'
-
-Then run:
-
-    $ bundle install
-
-
-Usage
-=====
+## Usage
 
 First, you must add the plugin to your `config.rb` (your Compass configuration file). This can be done be placing an
 import line at the top of the file and is required to add the compass plugin to the sass load paths:
 
-    require 'compass-h5bp'
-    
-Then, inside your SCSS (or Sass) file, you must import the `h5bp` compass library before you can use any of the mixins:
+    require 'compass-html5bp'
 
-    @import "h5bp";
+### HTML5BP SCSS File Order
+The following order ensures your custom modifications to the HTML Boilerplate styles will work as expected, by following the outline provided in the upstream HTML5 Boilerplate CSS.
 
-Then include the mixins that make up the [Normalize portion](http://necolas.github.com/normalize.css) of HTML5
-Boilerplate's styles. 
+1. Inside your SCSS (or Sass) file, you must import the `html5bp` compass library before you can use any of the mixins:
+
+    @import "html5bp";
+
+2. Include the mixins that make up the [Normalize](http://necolas.github.com/normalize.css) portion of the HTML5
+Boilerplate styles.
 
 You can include all of Normalize at once:
 
-    @include h5bp-normalize;
+    @include html5bp-normalize;
 
  Or pull in only the portions of Normalize you want:
 
-    @include h5bp-display;
-    @include h5bp-base;
-    @include h5bp-links;
-    @include h5bp-typography;
-    @include h5bp-lists;
-    @include h5bp-embeds;
-    @include h5bp-figures;
-    @include h5bp-forms;
-    @include h5bp-tables;
+    @include html5bp-display;
+    @include html5bp-base;
+    @include html5bp-links;
+    @include html5bp-typography;
+    @include html5bp-lists;
+    @include html5bp-embeds;
+    @include html5bp-figures;
+    @include html5bp-forms;
+    @include html5bp-tables;
 
-Next you can include the opinionated default base styles:
+3. *Optional:* Include the opinionated default base styles:
 
-    @include h5bp-base-styles;
+    @include html5bp-base-styles;
 
-You can include the default Html5 Boilerplate Chrome Frame notification styling:
+4. *Optional:* You can include the styling for the browser upgrade warning:
 
-    @include h5bp-chromeframe;
+    @include html5bp-browserupgrade;
 
-Now you can define your own custom CSS here.
+5. *Optional:* Define your custom modifications to the HTML5 Boilerplate styles here.
 
-Then (optionally) let H5bp define some semantic helper classes. (e.g. `.clearfix`):
+6. *Optional:* Let html5bp define some semantic helper classes. (e.g. `.clearfix`):
 
-    @include h5bp-helpers;
+    @include html5bp-helpers;
 
-Finally, you can include H5bp's predefined print style media query:
+7. *Optional:* Include html5bp's predefined print style media query:
 
-    @include h5bp-media;
+    @include html5bp-media;
 
-
-License
-=======
+## Acknowledgments
 
 [HTML5 Boilerplate](http://html5boilerplate.com), created by by Paul Irish and Divya Manian.
 
-Copyright (c) 2012 Peter Gumeson.
-See [LICENSE](https://github.com/sporkd/compass-h5bp/blob/master/LICENSE) for full license.
+Original work is Copyright (c) 2012 Peter Gumeson.
+This fork is Copyright (c) 2015 Ron Scott-Adams, under the same license as the original.
+See [LICENSE](https://github.com/tohuw/compass-html5bp/blob/master/LICENSE) for full license.
