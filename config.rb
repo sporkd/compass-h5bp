@@ -1,9 +1,9 @@
 require 'compass/import-once/activate'
 # Require any additional compass plugins here.
-require 'html5bp'
+require 'compass-html5bp'
 
 css_dir = "test/project/css"
-sass_dir = "stylesheets"
+sass_dir = "test/project/sass"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

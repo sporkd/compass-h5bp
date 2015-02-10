@@ -2,6 +2,7 @@
 
 @include html5bp-main;
 @include html5bp-helpers;
+@include html5bp-browserupgrade;
 
 
 @media only screen and (min-width: 35em) {
