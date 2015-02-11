@@ -1,13 +1,13 @@
-# Compass html5bp
+# An HTML5 Boilerplate Extension for Compass
 
-This is a [Compass extension](http://compass-style.org/help/tutorials/extensions/) of HTML5 mixins extracted from v5 of [HTML5 Boilerplate](http://html5boilerplate.com), forked from Peter Gumeson's original gem, [compass-h5bp](https://github.com/sporkd/compass-h5bp).
-This gem provides only the CSS mixins and not the HTML or Javascript templates. This makes sense because any
-implementation of HTML5 Boilerplate should be specific to the language and framework it's built on.
+This is a [Compass extension](http://compass-style.org/help/tutorials/extensions/) of HTML5 mixins extracted from v5 of the [HTML5 Boilerplate](http://html5boilerplate.com), forked from Peter Gumeson's original gem, [compass-h5bp](https://github.com/sporkd/compass-h5bp).
+
+This gem provides only the CSS mixins and not the HTML or JavaScript templates. Implementation of these and similar files ought to be managed by the framework and language your project is built upon.
 
 ## Installation
 
 ### Two options:
-* A raw install using gem:
+* Install using gem:
 `gem install compass-html5bp`
 
 * Or, if you're using [Bundler](http://gembundler.com/), you can install it via `bundle install` by placing the following line in your Gemfile: `gem 'compass-html5bp'`
@@ -15,58 +15,71 @@ implementation of HTML5 Boilerplate should be specific to the language and frame
 ## Usage
 
 First, you must add the plugin to your `config.rb` (your Compass configuration file). This can be done be placing an
-import line at the top of the file and is required to add the compass plugin to the sass load paths:
+import line at the top of the file and is required to add the Compass plugin to the Sass load paths:
 
     require 'compass-html5bp'
 
-### HTML5BP SCSS File Order
-The following order ensures your custom modifications to the HTML Boilerplate styles will work as expected, by following the outline provided in the upstream HTML5 Boilerplate CSS.
-
-1. Inside your SCSS (or Sass) file, you must import the `html5bp` compass library before you can use any of the mixins:
+Inside your SCSS (or Sass) file, you must import the `html5bp` compass library before you can use any of the mixins:
 
     @import "html5bp";
 
-2. Include the mixins that make up the [Normalize](http://necolas.github.com/normalize.css) portion of the HTML5
-Boilerplate styles.
+### Simple Implementation
+1. Include the html5bp mixin:
 
-You can include all of Normalize at once:
+        @include html5bp;
 
-    @include html5bp-normalize;
+2. *Optional:* Redefine the mixin `html5bp-custom` to declare custom modifications to the HTML5 Boilerplate styles.
+
+### Advanced Implementation
+To selectively import only certain elements, observe the following order. This ensures your custom modifications to the HTML Boilerplate styles will work as expected, by following the outline provided in the upstream HTML5 Boilerplate CSS.
+
+1. Include the mixins that make up the [Normalize](http://necolas.github.com/normalize.css) portion of the HTML5
+Boilerplate styles. You can include all of Normalize at once:
+
+        @include html5bp-normalize;
 
  Or pull in only the portions of Normalize you want:
 
-    @include html5bp-base;
-    @include html5bp-display;
-    @include html5bp-links;
-    @include html5bp-semantics;
-    @include html5bp-embedded;
-    @include html5bp-grouping;
-    @include html5bp-forms;
-    @include html5bp-tables;
+        @include normalize-base;
+        @include normalize-display;
+        @include normalize-links;
+        @include normalize-semantics;
+        @include normalize-embedded;
+        @include normalize-grouping;
+        @include normalize-forms;
+        @include normalize-tables;
 
-3. *Optional:* Include the opinionated default base styles:
+2. Include the opinionated default base styles:
 
-    @include html5bp-base-styles;
+        @include html5bp-base-styles;
 
-4. *Optional:* You can include the styling for the browser upgrade warning:
+3. You can include the styling for the browser upgrade warning:
 
-    @include html5bp-browserupgrade;
+        @include html5bp-browserupgrade;
 
-5. *Optional:* Define your custom modifications to the HTML5 Boilerplate styles here.
+4. Provide styling to the 404 page (requires that you specify the class `errorpage` for the html of the 404 document):
 
-6. *Optional:* Let html5bp define some semantic helper classes. (e.g. `.clearfix`):
+        @include html5bp-errorpage;
 
-    @include html5bp-helpers;
+5. Define your custom modifications to the HTML5 Boilerplate styles here.
 
-7. *Optional:* Include html5bp's predefined print style media query:
+6. Let html5bp define some semantic helper classes. (e.g. `.clearfix`):
 
-    @include html5bp-media;
+        @include html5bp-helpers;
+
+    There are also specific mixins provided in `html5bp-helpers` you can call instead.
+
+7. Include html5bp's predefined print style media query:
+
+        @include html5bp-media;
 
 ## Caveats
 
-If you're coming from [compass-h5bp](https://github.com/sporkd/compass-h5bp), be aware several normalize mixins have had their name changed, and any mixin or feature that had been marked for deprecation has been removed. That being said, migration should be relatively simple.
+If you're coming from [compass-h5bp](https://github.com/sporkd/compass-h5bp), be aware that several mixins have had their name changed, and any mixin or feature that had been marked for deprecation has been removed. That being said, migration should be relatively simple.
 
-I am no rubyist, so if I've botched any patches to the Ruby-specific stuff, please do open an issue or, better, submit a pull request.
+The order for the "Advanced Implementation" matters. It's important to note that "custom modifications to the HTML5 Boilerplate styles" means only that - the rest of your SCSS goes below everything listed.
+
+I am no Rubyist, so if I've botched any patches to the Ruby-specific stuff, please do open an issue or, better, submit a pull request. (For one, I know the tests could be better.)
 
 Then again, I might have botched anything else as well, so any contributions are very welcome.
 

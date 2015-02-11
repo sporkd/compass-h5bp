@@ -7,17 +7,17 @@
 @import "html5bp/normalize";
 @import "html5bp/main";
 @import "html5bp/browserupgrade"
-@import "html5bp/404"
+@import "html5bp/errorpage"
 @import "html5bp/helpers";
 @import "html5bp/media";
 
 @mixin html5bp-custom {
-    // Redefine this mixin to add custom modifications to h5bp styles.
+    // Redefine this mixin to add custom modifications to H5BP styles.
 }
 
 @mixin html5bp {
     @include html5bp-normalize;
-    @include html5bp-base;
+    @include html5bp-main;
     @include html5bp-display;
     @include html5bp-links;
     @include html5bp-semantics;
@@ -27,7 +27,7 @@
     @include html5bp-tables;
     @include html5bp-base-styles;
     @include html5bp-browserupgrade;
-    @include html5bp-404;
+    @include html5bp-errorpage;
     @include html5bp-custom
     @include html5bp-helpers;
     @include html5bp-media;

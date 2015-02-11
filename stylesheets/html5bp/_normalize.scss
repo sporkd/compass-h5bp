@@ -1,17 +1,17 @@
 // normalize.css v3.0.2 | MIT License | git.io/normalize
 @mixin html5bp-normalize {
-  @include html5bp-base;
-  @include html5bp-display;
-  @include html5bp-links;
-  @include html5bp-semantics;
-  @include html5bp-embedded;
-  @include html5bp-grouping;
-  @include html5bp-forms;
-  @include html5bp-tables;
+  @include normalize-base;
+  @include normalize-display;
+  @include normalize-links;
+  @include normalize-semantics;
+  @include normalize-embedded;
+  @include normalize-grouping;
+  @include normalize-forms;
+  @include normalize-tables;
 }
 
 // Base
-@mixin html5bp-base {
+@mixin normalize-base {
   // 1. Set default font family to sans-serif.
   // 2. Prevent iOS text size adjust after orientation change, without
   //    disabling user zoom.
@@ -28,7 +28,7 @@
 }
 
 // HTML5 display definitions
-@mixin html5bp-display {
+@mixin normalize-display {
   // Correct `block` display not defined for any HTML5 element in IE 8/9.
   // Correct `block` display not defined for `details` or `summary` in IE 10/11
   // and Firefox.
@@ -75,7 +75,7 @@
 }
 
 // Links
-@mixin html5bp-links {
+@mixin normalize-links {
   // Remove the gray background color from active links in IE 10.
   a {
     background-color: transparent;
@@ -89,7 +89,7 @@
 }
 
 // Text-level semantics
-@mixin html5bp-semantics {
+@mixin normalize-semantics {
   // Address styling not present in IE 8/9/10/11, Safari, and Chrome.
   abbr[title] {
     border-bottom: 1px dotted;
@@ -143,7 +143,7 @@
 }
 
 // Embedded content
-@mixin html5bp-embedded {
+@mixin normalize-embedded {
   // Remove border when inside `a` element in IE 8/9/10.
   img {
     border: 0;
@@ -156,7 +156,7 @@
 }
 
 // Grouping content
-@mixin html5bp-grouping {
+@mixin normalize-grouping {
   // Address margin not present in IE 8/9 and Safari.
   figure {
     margin: 1em 40px;
@@ -185,7 +185,7 @@
 }
 
 // Forms
-@mixin html5bp-forms {
+@mixin normalize-forms {
   // Known limitation: by default, Chrome and Safari on OS X allow very limited
   // styling of `select`, unless a `border` property is set.
   // 1. Correct color not being inherited.
@@ -311,7 +311,7 @@
 }
 
 // Tables
-@mixin html5bp-tables {
+@mixin normalize-tables {
   // Remove most spacing between table cells.
   table {
     border-collapse: collapse;
