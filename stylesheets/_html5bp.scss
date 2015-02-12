@@ -6,13 +6,17 @@
 
 @import "html5bp/normalize";
 @import "html5bp/main";
-@import "html5bp/browserupgrade"
-@import "html5bp/errorpage"
+@import "html5bp/browserupgrade";
+@import "html5bp/errorpage";
 @import "html5bp/helpers";
 @import "html5bp/media";
 
 @mixin html5bp-custom {
     // Redefine this mixin to add custom modifications to H5BP styles.
+    ::-moz-selection {
+      background: $selected-background-color;
+      text-shadow: none;
+    } //HACK: an empty mixin makes the compiler complain, so this restates a part of html5bp-main
 }
 
 @mixin html5bp {
@@ -28,7 +32,7 @@
     @include html5bp-base-styles;
     @include html5bp-browserupgrade;
     @include html5bp-errorpage;
-    @include html5bp-custom
+    @include html5bp-custom;
     @include html5bp-helpers;
     @include html5bp-media;
 }
