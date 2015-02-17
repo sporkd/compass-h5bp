@@ -89,4 +89,4 @@ Then again, I might have botched anything else as well, so any contributions are
 
 Original work is Copyright (c) 2012 Peter Gumeson.
 This fork is Copyright (c) 2015 Ron Scott-Adams, under the same license as the original.
-See [LICENSE](https://github.com/tohuw/compass-html5bp/blob/master/LICENSE) for full license.
+You can read a [summary of the MIT license](https://tldrlegal.com/license/mit-license#summary), or see [LICENSE](https://github.com/tohuw/compass-html5bp/blob/master/LICENSE) for the full license.
