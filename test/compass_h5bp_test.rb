@@ -1,6 +1,5 @@
 require 'test/unit'
 require 'compass'
-require 'compass/sass_compiler'
 require 'compass-h5bp'
 require 'sass/plugin'
 require 'fileutils'
@@ -28,10 +27,9 @@ class CompassH5bpTest < Test::Unit::TestCase
       config.output_style = :compact
       config.line_comments = false
     end
-    compiler = Compass.sass_compiler
-    compiler.logger = Compass::NullLogger.new
-    compiler.clean!
-    compiler.compile!
+    args = Compass.configuration.to_compiler_arguments(:logger => Compass::NullLogger.new)
+    compiler = Compass::Compiler.new *args
+    compiler.run
     original_css = read_and_normalize(ORIGINAL_OUTPUT_PATH)
     test_css = read_and_normalize(TEST_OUTPUT_PATH)
     original_normalize_css = read_and_normalize(ORIGINAL_NORMALIZE_OUTPUT_PATH)
