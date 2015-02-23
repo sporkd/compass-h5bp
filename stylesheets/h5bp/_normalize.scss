@@ -1,5 +1,5 @@
 //
-// Normalize v1.1.3 | MIT License | git.io/normalize
+// Normalize v1.1.1 | MIT License | git.io/normalize
 //
 
 @mixin h5bp-normalize {
@@ -78,8 +78,8 @@
       background: #fff; // 1
       color: #000; // 2
       font-size: 100%; // 3
-      -ms-text-size-adjust: 100%; // 4
       -webkit-text-size-adjust: 100%; // 4
+      -ms-text-size-adjust: 100%; // 4
   }
 
   // Address `font-family` inconsistency between `textarea` and other form
