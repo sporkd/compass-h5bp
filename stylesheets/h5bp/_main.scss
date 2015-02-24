@@ -4,12 +4,12 @@ $line-height: 1.4 !default;
 $selected-background-color: #b3d4fc !default;
 $hr-color: #ccc !default;
 
-@mixin html5bp-main {
-  @include html5bp-base-styles;
+@mixin h5bp-main {
+  @include h5bp-base-styles;
 }
 
 // Base styles: opinionated defaults
-@mixin html5bp-base-styles {
+@mixin h5bp-base-styles {
   html {
       color: $font-color;
       font-size: $font-size;
@@ -42,7 +42,7 @@ $hr-color: #ccc !default;
 
   // Remove the gap between audio, canvas, iframes,
   // images, videos and the bottom of their containers:
-  // https://github.com/html5bp/html5-boilerplate/issues/440
+  // https://github.com/h5bp/html5-boilerplate/issues/440
   audio,
   canvas,
   iframe,

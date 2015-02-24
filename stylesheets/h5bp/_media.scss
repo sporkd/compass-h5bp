@@ -1,13 +1,13 @@
 // Print styles
 // Inlined to avoid the additional HTTP request:
 // http://www.phpied.com/delay-loading-your-print-css/
-@mixin html5bp-media {
+@mixin h5bp-media {
   @media print {
-    @include html5bp-media-print;
+    @include h5bp-media-print;
   }
 }
 
-@mixin html5bp-media-print {
+@mixin h5bp-media-print {
     @media print {
         *,
         *:before,

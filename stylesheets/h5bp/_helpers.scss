@@ -1,26 +1,26 @@
 // Helper classes
-@mixin html5bp-helpers {
+@mixin h5bp-helpers {
 
-  .hidden { @include html5bp-hidden; }
+  .hidden { @include h5bp-hidden; }
 
-  .visuallyhidden { @include html5bp-visuallyhidden; }
+  .visuallyhidden { @include h5bp-visuallyhidden; }
 
-  .invisible { @include html5bp-invisible; }
+  .invisible { @include h5bp-invisible; }
 
-  .clearfix { @include html5bp-clearfix; }
+  .clearfix { @include h5bp-clearfix; }
 
 }
 
 // Hide from both screenreaders and browsers:
 // http://juicystudio.com/article/screen-readers-display-none.php
-@mixin html5bp-hidden {
+@mixin h5bp-hidden {
   display: none !important;
   visibility: hidden;
 }
 
 // Hide only visually, but have it available for screenreaders:
 // http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-@mixin html5bp-visuallyhidden {
+@mixin h5bp-visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -44,7 +44,7 @@
 }
 
 // Hide visually and from screenreaders, but maintain layout
-@mixin html5bp-invisible {
+@mixin h5bp-invisible {
   visibility: hidden;
 }
 
@@ -57,7 +57,7 @@
 //    that receive the `clearfix` class.
 // 2. The use of `table` rather than `block` is only necessary if using
 //    `:before` to contain the top-margins of child elements.
-@mixin html5bp-clearfix {
+@mixin h5bp-clearfix {
   &:before,
   &:after {
     content: " "; // 1

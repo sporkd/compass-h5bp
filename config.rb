@@ -1,6 +1,6 @@
 require 'compass/import-once/activate'
 # Require any additional compass plugins here.
-require 'compass-html5bp'
+require 'compass-h5bp'
 
 css_dir = "test/project/css"
 sass_dir = "test/project/sass"

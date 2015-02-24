@@ -1,6 +1,6 @@
 require 'test/unit'
 require 'compass'
-require 'compass-html5bp'
+require 'compass-h5bp'
 require 'sass/plugin'
 require 'fileutils'
 
@@ -10,7 +10,7 @@ TEST_OUTPUT_PATH = File.join(PROJECT_DIR, 'css', 'test.css')
 ORIGINAL_NORMALIZE_OUTPUT_PATH = File.join(PROJECT_DIR, 'css', 'original_normalize.css')
 TEST_NORMALIZE_OUTPUT_PATH = File.join(PROJECT_DIR, 'css', 'test_normalize.css')
 
-class Compasshtml5bpTest < Test::Unit::TestCase
+class Compassh5bpTest < Test::Unit::TestCase
 
   def test_compass_version_matches_original
     FileUtils.rm_f ORIGINAL_OUTPUT_PATH

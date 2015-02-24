@@ -1,8 +1,8 @@
-@import "html5bp";
+@import "h5bp";
 
-@include html5bp-main;
-@include html5bp-helpers;
-@include html5bp-browserupgrade;
+@include h5bp-main;
+@include h5bp-helpers;
+@include h5bp-browserupgrade;
 
 
 @media only screen and (min-width: 35em) {
@@ -19,5 +19,5 @@
 }
 
 @media print {
-  @include html5bp-media-print;
+  @include h5bp-media-print;
 }

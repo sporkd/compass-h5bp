@@ -2,26 +2,26 @@
 //
 // What follows is the result of much research on cross-browser styling.
 // Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
-// Kroc Camen, and the html5bp dev community and team.
+// Kroc Camen, and the h5bp dev community and team.
 
-@import "html5bp/normalize";
-@import "html5bp/main";
-@import "html5bp/browserupgrade";
-@import "html5bp/errorpage";
-@import "html5bp/helpers";
-@import "html5bp/media";
+@import "h5bp/normalize";
+@import "h5bp/main";
+@import "h5bp/browserupgrade";
+@import "h5bp/errorpage";
+@import "h5bp/helpers";
+@import "h5bp/media";
 
-@mixin html5bp-custom {
+@mixin h5bp-custom {
     // Redefine this mixin to add custom modifications to H5BP styles.
 
 }
 
-@mixin html5bp {
-    @include html5bp-normalize;
-    @include html5bp-main;
-    @include html5bp-browserupgrade;
-    @include html5bp-errorpage;
-    @include html5bp-custom;
-    @include html5bp-helpers;
-    @include html5bp-media;
+@mixin h5bp {
+    @include h5bp-normalize;
+    @include h5bp-main;
+    @include h5bp-browserupgrade;
+    @include h5bp-errorpage;
+    @include h5bp-custom;
+    @include h5bp-helpers;
+    @include h5bp-media;
 }
