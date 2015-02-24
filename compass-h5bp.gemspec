@@ -4,7 +4,7 @@ require 'compass/h5bp/version'
 
 Gem::Specification.new do |s|
   s.name                  = 'compass-h5bp'
-  s.version               = Compass::Html5bp::VERSION
+  s.version               = Compass::H5bp::VERSION
   s.platform              = Gem::Platform::RUBY
   s.required_ruby_version = '~> 2.0'
   s.authors               = ['Peter Gumeson']
