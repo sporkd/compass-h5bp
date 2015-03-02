@@ -5,3 +5,4 @@ pkg/*
 .rvmrc
 test/project/css/*.css
 vendor/bundle
+*.sublime-*

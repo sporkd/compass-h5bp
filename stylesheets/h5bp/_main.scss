@@ -1,34 +1,23 @@
-$line-height: 1.4 !default;
 $font-color: #222 !default;
-$font-family: sans-serif !default;
 $font-size: 1em !default;
-$selected-font-color: #fff !default;
+$line-height: 1.4 !default;
 $selected-background-color: #b3d4fc !default;
+$hr-color: #ccc !default;
 
 @mixin h5bp-main {
   @include h5bp-base-styles;
-  @include h5bp-chromeframe;
 }
 
-//
 // Base styles: opinionated defaults
-//
 @mixin h5bp-base-styles {
-
-  html,
-  button,
-  input,
-  select,
-  textarea {
+  html {
       color: $font-color;
-  }
-
-  body {
       font-size: $font-size;
       line-height: $line-height;
   }
 
-  // Remove text-shadow in selection highlight: h5bp.com/i
+  // Remove text-shadow in selection highlight:
+  // https://twitter.com/miketaylr/status/12228805301
   // These selection rule sets have to be separate.
   // Customize the background color to match your design.
   ::-moz-selection {
@@ -46,13 +35,20 @@ $selected-background-color: #b3d4fc !default;
       display: block;
       height: 1px;
       border: 0;
-      border-top: 1px solid #ccc;
+      border-top: 1px solid $hr-color;
       margin: 1em 0;
       padding: 0;
   }
 
-  // Remove the gap between images and the bottom of their containers: h5bp.com/i/440
-  img {
+  // Remove the gap between audio, canvas, iframes,
+  // images, videos and the bottom of their containers:
+  // https://github.com/h5bp/html5-boilerplate/issues/440
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
       vertical-align: middle;
   }
 
@@ -66,18 +62,5 @@ $selected-background-color: #b3d4fc !default;
   // Allow only vertical resizing of textareas.
   textarea {
       resize: vertical;
-  }
-}
-
-//
-// Chrome Frame Prompt
-//
-
-@mixin h5bp-chromeframe {
-  .chromeframe {
-      margin: 0.2em 0;
-      background: #ccc;
-      color: #000;
-      padding: 0.2em 0;
   }
 }

@@ -7,11 +7,14 @@ require 'fileutils'
 PROJECT_DIR = File.join(File.dirname(__FILE__), 'project')
 ORIGINAL_OUTPUT_PATH = File.join(PROJECT_DIR, 'css', 'original.css')
 TEST_OUTPUT_PATH = File.join(PROJECT_DIR, 'css', 'test.css')
-ORIGINAL_NORMALIZE_OUTPUT_PATH = File.join(PROJECT_DIR, 'css', 'original_normalize.css')
+ORIGINAL_NORMALIZE_OUTPUT_PATH = File.join(
+  PROJECT_DIR, 'css',
+  'original_normalize.css'
+)
 TEST_NORMALIZE_OUTPUT_PATH = File.join(PROJECT_DIR, 'css', 'test_normalize.css')
 
-class CompassH5bpTest < Test::Unit::TestCase
-  
+# Test case for compass-h5bp
+class Compassh5bpTest < Test::Unit::TestCase
   def test_compass_version_matches_original
     FileUtils.rm_f ORIGINAL_OUTPUT_PATH
     FileUtils.rm_f TEST_OUTPUT_PATH
@@ -27,8 +30,10 @@ class CompassH5bpTest < Test::Unit::TestCase
       config.output_style = :compact
       config.line_comments = false
     end
-    args = Compass.configuration.to_compiler_arguments(:logger => Compass::NullLogger.new)
-    compiler = Compass::Compiler.new *args
+    args = Compass.configuration.to_compiler_arguments(
+      logger: 'Compass::NullLogger.new'
+    )
+    compiler = Compass::Compiler.new(*args)
     compiler.run
     original_css = read_and_normalize(ORIGINAL_OUTPUT_PATH)
     test_css = read_and_normalize(TEST_OUTPUT_PATH)
@@ -37,13 +42,13 @@ class CompassH5bpTest < Test::Unit::TestCase
     assert_equal original_css, test_css
     assert_equal original_normalize_css, test_normalize_css
   end
-  
+
   def read_and_normalize(file)
-    File.open(file).read.
-      gsub(/\/\*.+?\*\/\n/m, '').
-      gsub(/\n+/, "\n").
-      gsub(/\n +/, "\n").
-      gsub(/color: white;/, 'color: #ffffff;').
-      gsub(/#(.)(.)(.)\b/, '#\1\1\2\2\3\3')
+    File.open(file).read
+      .gsub(/\/\*.+?\*\/\n/m, '')
+      .gsub(/\n+/, "\n")
+      .gsub(/\n +/, "\n")
+      .gsub(/color: white;/, 'color: #ffffff;')
+      .gsub(/#(.)(.)(.)\b/, '#\1\1\2\2\3\3')
   end
 end
