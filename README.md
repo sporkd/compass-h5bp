@@ -10,7 +10,7 @@ This gem provides only the CSS mixins and not the HTML or JavaScript templates. 
 * Install using gem:
 `gem install compass-h5bp`
 
-* Or, if you're using [Bundler](http://gembundler.com/), you can install it via `bundle install` by placing the following line in your Gemfile: `gem 'compass-h5bp'`
+* Or, if you're using [Bundler](http://gembundler.com/), you can install it via `bundle install` after placing the following line in your Gemfile: `gem 'compass-h5bp'`
 
 ## Usage
 
@@ -75,7 +75,7 @@ Boilerplate styles. You can include all of Normalize at once:
 
 ## Caveats
 
-If you're coming from [compass-h5bp](https://github.com/sporkd/compass-h5bp), be aware that several mixins have had their name changed, and any mixin or feature that had been marked for deprecation has been removed. That being said, migration should be relatively simple.
+If you're coming from a previous version, be aware that several mixins have had their name changed, and any mixin or feature that had been marked for deprecation has been removed. That being said, migration should be relatively simple.
 
 The order for the "Advanced Implementation" matters. It's important to note that "custom modifications to the HTML5 Boilerplate styles" means only that - the rest of your SCSS goes below everything listed.
 
