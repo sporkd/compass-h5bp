@@ -1,3 +1,7 @@
+# DEPRECATED
+
+[Compass is deprecated](https://github.com/Compass/compass/issues/1999), so this project is, too. If you've some bizarre need to use it, it ought to still work as of Compass 1.0.3. Also note this there has been an update to H5BP upstream since this release, but the Normalize code reflected here is compliant to 7.0, the current version as of Sep 2017.
+
 # An HTML5 Boilerplate Extension for Compass
 
 This is a [Compass extension](http://compass-style.org/help/tutorials/extensions/) of HTML5 mixins extracted from v5 of the [HTML5 Boilerplate](http://html5boilerplate.com).
